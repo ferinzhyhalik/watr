@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".fragments.UrineTab">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/hydrationLevelText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingTop="4dp"
+                android:paddingBottom="3dp"
+                android:text="@string/callefttext"
+                android:textSize="36sp" />
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="match_parent"
+                android:layout_height="71dp"
+                android:layout_marginTop="14dp"
+                android:contentDescription="@string/logodesc"
+                android:src="@drawable/watr_logo" />
+
+
+            <ListView
+                android:id="@+id/urineLogList"
+                android:layout_width="338sp"
+                android:layout_height="228sp"
+                android:layout_gravity="center"
+                android:background="@android:drawable/editbox_background">
+
+            </ListView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="41dp">
+
+
+                <EditText
+                    android:id="@+id/urineText"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center|center_horizontal"
+                    android:layout_marginStart="48dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="48dp"
+                    android:ems="10"
+                    android:hint="@string/caledittext"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.275"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/foodText" />
+
+
+                <Button
+                    android:id="@+id/urineAddBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="4dp"
+                    android:orientation="horizontal"
+                    android:text="@string/calBtn"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/calorieText" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <RadioGroup
+                android:id="@+id/radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#dbeceb"
+                android:padding="15dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Apa warna pipis anda?"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    />
+
+                <RadioButton
+                    android:id="@+id/phase1"
+                    android:layout_width="wrap_content"
+                    android:background="@drawable/in_the_clear"
+                    android:layout_height="wrap_content"
+                    android:text = "1"
+
+                    />
+
+                <RadioButton
+                    android:id="@+id/phase2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/perfect_pale"
+                    android:text = "2"
+
+                    />
+                <RadioButton
+                    android:id="@+id/phase3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/yellow_mellow"
+                    android:text = "3"
+
+                    />
+
+                <RadioButton
+                    android:id="@+id/phase4"
+                    android:layout_width="88dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/golden_glow"
+                    android:text = "4"
+                     />
+                <RadioButton
+                    android:id="@+id/phase5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cautiously_bright"
+                    android:text = "5"
+
+                    />
+                <RadioButton
+                    android:id="@+id/phase6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/amber_light"
+                    android:text = "6"
+
+                    />
+                <RadioButton
+                    android:id="@+id/phase7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/sunset_burn"
+                    android:text = "7"
+
+                    />
+                <RadioButton
+                    android:id="@+id/phase8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/dessert_thirst"
+                    android:text = "8"
+
+                    />
+                <Button
+                    android:id="@+id/submitUrine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Submit Urine"/>
+
+            </RadioGroup>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".fragments.LogTab">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="match_parent"
+                android:layout_height="71dp"
+                android:layout_marginTop="14dp"
+                android:contentDescription="@string/logodesc"
+                android:src="@drawable/watr_logo" />
+
+            <TextView
+                android:id="@+id/calsLeft"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingTop="4dp"
+                android:paddingBottom="3dp"
+                android:text="@string/callefttext"
+                android:textSize="36sp" />
+
+            <ProgressBar
+                android:id="@+id/calProgress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="338dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp" />
+
+            <ListView
+                android:id="@+id/calLogList"
+                android:layout_width="338sp"
+                android:layout_height="228sp"
+                android:layout_gravity="center"
+                android:background="@android:drawable/editbox_background">
+
+            </ListView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+
+                <EditText
+                    android:id="@+id/foodText"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="48dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="48dp"
+                    android:digits="0123456789*, qwertzuiopasdfghjklyxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"
+                    android:ems="10"
+                    android:hint="@string/foodedittext"
+                    android:inputType="textPersonName"
+                    android:nextFocusDown="@+id/calorieText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.275"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/calorieText"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center|center_horizontal"
+                    android:layout_marginStart="48dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="48dp"
+                    android:ems="10"
+                    android:hint="@string/caledittext"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.275"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/foodText" />
+
+                <Button
+                    android:id="@+id/calorieAddBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="4dp"
+                    android:orientation="horizontal"
+                    android:text="@string/calBtn"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/calorieText" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
