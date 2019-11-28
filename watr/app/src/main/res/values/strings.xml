@@ -43,5 +43,14 @@
     <string name="setupNextBtn">Next</string>
     <string name="helpInfo">Adding calories: \n\t Fill in the food name option if needed, and enter the calories in the box below and press enter. This will add your calories to the current day\'s log.\n\nRemoving calories:\n\t Press and hold the calories entry you\'d like to remove, and it will be removed from your current log.\n\nFinish logging:\n\t Press and hold the Kcal logo, this will log the current eaten calories for today and add it to the Track tab\'s graph.</string>
     <string name="helpHeader">Basic Use</string>
+    <string name ="callUrineText" > Dehydration Level </string>
+    <string name="urineInfo" >1: Drinking enough fluid
+        \n 2:Drink More Water to get Number 1
+        \n 3: Dehydrated,
+        \n 4:Fair
+        \n 5: Dehydrated
+        \n 6: Very Dehydrated
+        \n 7: Super Dehydrated
+        \n 8:Extremely Dehydrated </string>
 
 </resources>

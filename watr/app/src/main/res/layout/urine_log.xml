@@ -8,7 +8,16 @@
     android:focusable="true"
     android:focusableInTouchMode="true"
     tools:context=".fragments.UrineTab">
-
+    <TextView
+        android:id="@+id/hydrationLevelText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingTop="4dp"
+        android:paddingBottom="3dp"
+        android:text="@string/callUrineText"
+        android:textSize="36sp" />
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -17,23 +26,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <TextView
-                android:id="@+id/hydrationLevelText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:paddingTop="4dp"
-                android:paddingBottom="3dp"
-                android:text="@string/callefttext"
-                android:textSize="36sp" />
+
             <ImageView
                 android:id="@+id/logo"
                 android:layout_width="match_parent"
                 android:layout_height="71dp"
                 android:layout_marginTop="14dp"
                 android:contentDescription="@string/logodesc"
-                android:src="@drawable/watr_logo" />
+                android:src="@drawable/toilet" />
 
 
             <ListView
@@ -90,24 +90,23 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#dbeceb"
-                android:padding="15dp"
-                android:gravity="center">
+                android:gravity="center"
+                android:padding="15dp">
 
                 <TextView
                     android:id="@+id/title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Apa warna pipis anda?"
-                    android:textStyle="bold"
+                    android:text="How is Your Urine Color?"
                     android:textSize="20sp"
-                    />
+                    android:textStyle="bold" />
 
                 <RadioButton
                     android:id="@+id/phase1"
                     android:layout_width="wrap_content"
-                    android:background="@drawable/in_the_clear"
                     android:layout_height="wrap_content"
-                    android:text = "1"
+                    android:background="@drawable/in_the_clear"
+                    android:text="1"
 
                     />
 
@@ -116,15 +115,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/perfect_pale"
-                    android:text = "2"
+                    android:text="2"
 
                     />
+
                 <RadioButton
                     android:id="@+id/phase3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/yellow_mellow"
-                    android:text = "3"
+                    android:text="3"
 
                     />
 
@@ -133,49 +133,61 @@
                     android:layout_width="88dp"
                     android:layout_height="wrap_content"
                     android:background="@drawable/golden_glow"
-                    android:text = "4"
-                     />
+                    android:text="4" />
+
                 <RadioButton
                     android:id="@+id/phase5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/cautiously_bright"
-                    android:text = "5"
+                    android:text="5"
 
                     />
+
                 <RadioButton
                     android:id="@+id/phase6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/amber_light"
-                    android:text = "6"
+                    android:text="6"
 
                     />
+
                 <RadioButton
                     android:id="@+id/phase7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/sunset_burn"
-                    android:text = "7"
+                    android:text="7"
 
                     />
+
                 <RadioButton
                     android:id="@+id/phase8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/dessert_thirst"
-                    android:text = "8"
+                    android:text="8"
 
                     />
+
                 <Button
                     android:id="@+id/submitUrine"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="Submit Urine"/>
+                    android:text="Submit Urine" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/urineInfo"></TextView>
 
             </RadioGroup>
 
 
         </LinearLayout>
     </ScrollView>
+
 </LinearLayout>
+
+
